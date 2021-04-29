@@ -17,6 +17,12 @@ public class CarImpl implements Car {
         this.name = name;
     }
 
+    public CarImpl(String name, int position) {
+        validationNameLength(name);
+        this.name = name;
+        this.position = position;
+    }
+
     private void validationNameLength(String name) {
         if (isValidLength(name)) {
             throw new IllegalArgumentException(ExceptionMessage.CAR_NAME_LENGTH);
