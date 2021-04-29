@@ -28,10 +28,6 @@ public class IoManager {
         System.out.println(output);
     }
 
-    public void outputEnter() {
-        System.out.println();
-    }
-
     public void outputResultOfGame(String[] winnerNames) {
         StringBuilder sbWinnerNames = new StringBuilder();
         for (int i = 0; i < winnerNames.length; i++) {
@@ -40,6 +36,10 @@ public class IoManager {
         sbWinnerNames.delete(sbWinnerNames.length() - 2, sbWinnerNames.length());
 
         System.out.println(sbWinnerNames + UiMessage.WINNER);
+    }
+
+    public void outputResultMessage() {
+        System.out.println(UiMessage.RESULT);
     }
 
     private String[] inputCarNames() {
@@ -56,5 +56,9 @@ public class IoManager {
 
     private void outputRequireTurnCount() {
         System.out.println(UiMessage.REQUIRE_TURN_COUNT);
+    }
+
+    public void outputEnter() {
+        System.out.println();
     }
 }
