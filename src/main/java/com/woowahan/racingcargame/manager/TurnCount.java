@@ -11,7 +11,7 @@ public class TurnCount {
     }
 
     private void validate(int turnCount) {
-        if (turnCount < 0) {
+        if (turnCount <= 0) {
             throw new IllegalArgumentException(ExceptionMessage.TURN_COUNT);
         }
     }
